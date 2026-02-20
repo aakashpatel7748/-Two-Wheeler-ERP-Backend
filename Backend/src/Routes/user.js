@@ -5,7 +5,7 @@ import {
     UserRoles,
     assignBranch,
     AccountControllers
-} from "../Controller/userController.js";
+} from "../Controller/UserController.js";
 
 const router = Router();
 

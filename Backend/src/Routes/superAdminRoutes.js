@@ -1,7 +1,7 @@
 import Router from 'express';
 import { isAuthenticated } from '../Middleware/adminAuth.js';
 const router = Router();
-import {superAdminContoller} from '../Controller/superAdminController.js';
+import {superAdminContoller} from '../Controller/SuperAdminController.js';
 
 // get /admin   currentUser
 router.get("/admin", isAuthenticated, superAdminContoller);

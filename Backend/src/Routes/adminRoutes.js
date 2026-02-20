@@ -7,7 +7,7 @@ import {
      adminlogout,
      currentUser
 
-} from '../Controller/adminContoller.js';
+} from '../Controller/AdminController.js';
 
 // get /admin   currentUser
 router.get("/admin", isAuthenticated, currentUser);
