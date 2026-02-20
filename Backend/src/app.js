@@ -59,6 +59,10 @@ app.use("/model", ModelRoutes)
 // comman routes
 app.use("/api/comman", commanRoutes)
 
+app.get("/", (req, res) => {
+    res.send("Hello World! Server is live.");
+});
+
 app.use((req, res, next) => {
     next(new ErrorHendler(`Route not found: ${req.originalUrl}`, 404));
 });
