@@ -1,4 +1,4 @@
-import { catchAsyncError } from "../Middleware/catchAsyncerror.js";
+import { catchAsyncError } from "../Middleware/catchAsyncError.js";
 import Admin from "../Models/adminSchema.js";
 import { sendToken } from "../utils/SendToken.js";
 

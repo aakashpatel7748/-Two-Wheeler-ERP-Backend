@@ -1,4 +1,4 @@
-import { catchAsyncError } from "../../Middleware/catchAsyncerror.js";
+import { catchAsyncError } from "../../Middleware/catchAsyncError.js";
 import Company from "../../Models/Master/companySchema.js"
 import Admin from "../../Models/adminSchema.js"
 

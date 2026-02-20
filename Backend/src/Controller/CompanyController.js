@@ -1,4 +1,4 @@
-import { catchAsyncError } from "../Middleware/catchAsyncerror.js";
+import { catchAsyncError } from "../Middleware/catchAsyncError.js";
 import Company from "../Models/CompanySchema.js";
 import { sendToken } from "../utils/SendToken.js";
 import { logger } from "../../lib/logger.js";

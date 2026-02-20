@@ -1,5 +1,5 @@
 import { mongo } from "mongoose";
-import { catchAsyncError } from "../Middleware/catchAsyncerror.js";
+import { catchAsyncError } from "../Middleware/catchAsyncError.js";
 import Customer from "../Models/customerSchema.js"
 
 

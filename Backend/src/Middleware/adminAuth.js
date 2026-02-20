@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken"
-import { catchAsyncError } from "../Middleware/catchAsyncerror.js";
+import { catchAsyncError } from "../Middleware/catchAsyncError.js";
 import superAdmin from "../Models/superAdminSchema.js"
 
 

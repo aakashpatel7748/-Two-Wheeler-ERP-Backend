@@ -1,5 +1,5 @@
 import jwt from "jsonwebtoken"
-import { catchAsyncError } from "./catchAsyncerror.js";
+import { catchAsyncError } from "./catchAsyncError.js";
 import Company from "../Models/CompanySchema.js"
 import User from "../Models/userModel.js"
 import ErrorHendler from "../utils/ErrorHendler.js";

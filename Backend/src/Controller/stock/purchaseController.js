@@ -1,5 +1,5 @@
 import PurchaseStock from "../../Models/Stock/purchaseStockSchema.js";
-import { catchAsyncError } from "../../Middleware/catchAsyncerror.js";
+import { catchAsyncError } from "../../Middleware/catchAsyncError.js";
 import Stock from "../../Models/Stock/currentStockSchema.js"
 
 

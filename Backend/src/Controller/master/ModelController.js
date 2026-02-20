@@ -1,4 +1,4 @@
-import { catchAsyncError } from "../../Middleware/catchAsyncerror.js";
+import { catchAsyncError } from "../../Middleware/catchAsyncError.js";
 import Model from "../../Models/Master/modelSchema.js"
 
 export const createModel = catchAsyncError(async (req, res) => {

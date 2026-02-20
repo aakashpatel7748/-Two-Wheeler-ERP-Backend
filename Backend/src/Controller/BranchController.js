@@ -1,4 +1,4 @@
-import { catchAsyncError } from "../Middleware/catchAsyncerror.js";
+import { catchAsyncError } from "../Middleware/catchAsyncError.js";
 import Branch from "../Models/BranchSchema.js";
 import { logger } from "../../lib/logger.js";
 

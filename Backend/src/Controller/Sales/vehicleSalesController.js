@@ -1,5 +1,5 @@
 import VehicleSale from "../../Models/Stock/vehicleSalesSchema.js";
-import { catchAsyncError } from "../../Middleware/catchAsyncerror.js";
+import { catchAsyncError } from "../../Middleware/catchAsyncError.js";
 import Stock from "../../Models/Stock/currentStockSchema.js"
 
 export const createVehicleSale = catchAsyncError(async (req, res) => {

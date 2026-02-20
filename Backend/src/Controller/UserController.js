@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import { logger } from "../../lib/logger.js";
-import { catchAsyncError } from "../Middleware/catchAsyncerror.js";
+import { catchAsyncError } from "../Middleware/catchAsyncError.js";
 import Branch from "../Models/BranchSchema.js";
 import Employee from "../Models/EmployeeSchema.js";
 import userModel from "../Models/userModel.js";
