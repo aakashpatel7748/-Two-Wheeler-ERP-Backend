@@ -1,16 +1,16 @@
 import express from 'express';
 
 // routes import!
-import BranchRoutes from "../src/Routes/BranchRoute.js";
-import EmployeeRoutes from "../src/Routes/EmployeeRoutes.js"
-import ModelRoutes from "../src/Routes/master/modelRoutes.js"
-import CustomerRoutes from "../src/Routes/customerRoutes.js"
-import CompanyRoutes from "../src/Routes/companyRoutes.js"
-import purchesStock from "../src/Routes/stock/purcheaseStockRoutes.js"
-import currentStock from "../src/Routes/stock/currentStockRoutes.js"
-import vehicleSles from "../src/Routes/stock/vehicleSlesStock.js"
-import adminUserRoutes from "../src/Routes/user.js"
-import commanRoutes from "../src/Routes/comman.js"
+import BranchRoutes from "./Routes/BranchRoute.js";
+import EmployeeRoutes from "./Routes/EmployeeRoutes.js";
+import ModelRoutes from "./Routes/master/modelRoutes.js";
+import CustomerRoutes from "./Routes/customerRoutes.js";
+import CompanyRoutes from "./Routes/companyRoutes.js";
+import purchesStock from "./Routes/stock/purcheaseStockRoutes.js";
+import currentStock from "./Routes/stock/currentStockRoutes.js";
+import vehicleSles from "./Routes/stock/vehicleSlesStock.js";
+import adminUserRoutes from "./Routes/user.js";
+import commanRoutes from "./Routes/comman.js";
 
 import cookieParser from 'cookie-parser';
 import cors from "cors"
