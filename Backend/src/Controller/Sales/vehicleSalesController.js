@@ -1,18 +1,32 @@
 import VehicleSale from "../../Models/Stock/vehicleSalesSchema.js";
 import { catchAsyncError } from "../../Middleware/catchAsyncerror.js";
+import Stock from "../../Models/Stock/currentStockSchema.js"
 
 export const createVehicleSale = catchAsyncError(async (req, res) => {
+  const { customer, vehicle, salePrice, invoiceNumber } = req.body;
 
-  const sale = await VehicleSale(req.body).save();
+  const sale = await VehicleSale.create({
+    customer,
+    vehicle,
+    salePrice,
+    invoiceNumber,
+    createdBy: req.company.id
+  });
 
-  res.status(201).json({ success: true, sale });
+  // Optionally mark vehicle as sold in stock
+   await Stock.findByIdAndUpdate(vehicle, { isSold: true });
+
+  res.status(200).json({
+    success: true,
+    message: "Vehicle sold successfully!",
+    sale
+  });
 });
 
 export const getAllVehicleSales = catchAsyncError(async (req, res) => {
   const sales = await VehicleSale.find()
-    .populate("model")
     .populate("customer")
-    .populate("branch");
+    .populate("vehicle");
 
   res.status(200).json({ success: true, sales });
 });

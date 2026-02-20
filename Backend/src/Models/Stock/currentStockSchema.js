@@ -6,10 +6,24 @@ const currentStockSchema = new mongoose.Schema({
     ref: "Model",
     required: true,
   },
-  branch: {
+  company: {
+    type: String,
+    required: true
+  },
+  createdBy: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Branch",
     required: true,
+  },
+  
+  purchaseDate: {
+    type: Date,
+    default: Date.now
+  },
+  isSold:
+  {
+    type: Boolean,
+    default: false
   },
   quantity: {
     type: Number,

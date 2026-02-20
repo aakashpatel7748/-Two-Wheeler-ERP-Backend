@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const vehicleSalesSchema = new mongoose.Schema({
-  model: {
+  vehicle: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Model",
+    ref: "CurrentStock", 
     required: true,
   },
   customer: {
@@ -19,9 +19,9 @@ const vehicleSalesSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  branch: {
+  createdBy: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Branch",
+    ref: "company",
     required: true,
   },
   invoiceNumber: String,

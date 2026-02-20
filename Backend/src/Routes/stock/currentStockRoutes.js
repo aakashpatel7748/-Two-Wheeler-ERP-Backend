@@ -1,17 +1,17 @@
 import Router from 'express';
 const router = Router()
-import { isAuthenticated } from '../../Middleware/adminAuth.js';
-import{isAdmin} from "../../Middleware/isAdmin.js"
+import { isAuthenticated } from '../../Middleware/companyAuth.js';
 import {
     currentStock,
-    getAllStock
+    getAllStock,
+ } from "../../Controller/stock/currentStockController.js"
 
-} from "../../Controller/stock/currentStockController.js"
+// post /getAllStock
+router.get("/getAllStock", isAuthenticated, getAllStock)
 
-// get /all-company
-router.get("/getsotck",isAuthenticated, isAdmin("Admin"), currentStock )
+// get /current
+router.get("/current", isAuthenticated, currentStock)
 
-// post /create
-router.get("/getAllStock",isAuthenticated, isAdmin("Admin"), getAllStock )
+
 
 export default router;

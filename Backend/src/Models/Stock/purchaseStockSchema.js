@@ -2,11 +2,11 @@ import mongoose from "mongoose";
 
 const purchaseStockSchema = new mongoose.Schema(
   {
-    // invoiceNumber: {
-    //   type: String,
-    //   required: true,
-    //   unique: true,
-    // },
+    invoiceNumber: {
+      type: String,
+      required: true,
+      unique: true,
+    },
     purchaseDate: {
       type: Date,
       required: true,
@@ -38,7 +38,7 @@ const purchaseStockSchema = new mongoose.Schema(
     },
     // addedBy: {
     //   type: mongoose.Schema.Types.ObjectId,
-    //   ref: "Employee", // or "User" if you're using a single user model
+    //   ref: "Employee", 
     //   required: true,
     // },
     remarks: {

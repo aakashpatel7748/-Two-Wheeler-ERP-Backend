@@ -1,13 +1,12 @@
 import Router from 'express';
-import { isAuthenticated } from '../../Middleware/adminAuth.js';
-import { isAdmin } from '../../Middleware/isAdmin.js';
+import { isAuthenticated } from '../../Middleware/companyAuth.js';
 const router = Router();
 import { createModel, getAllModels } from "../../Controller/master/ModelController.js"
 
 // get /getAll
-router.get("/getAll", isAuthenticated, isAdmin("Admin"), getAllModels)
+router.get("/getAll", isAuthenticated,  getAllModels)
 
 // post /create
-router.post("/create", isAuthenticated, isAdmin("Admin"), createModel)
+router.post("/create", isAuthenticated,  createModel)
 
 export default router;

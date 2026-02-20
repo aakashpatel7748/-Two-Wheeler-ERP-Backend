@@ -1,26 +1,18 @@
 import { Router } from "express";
-import { isAuthenticated } from "../Middleware/adminAuth.js";
+import { isAuthenticated } from "../Middleware/companyAuth.js";
 import {
-    getAllEmployees,
-    createEmployees,
-    updateEmployees,
-    deleteEmployees
-
+    employe,
+    getEmployees
 } from "../Controller/EmployeeController.js";
-import { isAdmin } from "../Middleware/isAdmin.js";
 
 const router = Router();
 
-// get all employee
-router.get("/all", isAuthenticated, isAdmin("Admin"), getAllEmployees)
+// get /get-employees
+router.get("/get-employees", isAuthenticated, getEmployees)
 
 // post /create
-router.post("/create", isAuthenticated, isAdmin("Admin"), createEmployees)
+router.post("/employe", isAuthenticated, employe)
 
-// post /update
-router.post("/update/:id", isAuthenticated, isAdmin("Admin"), updateEmployees)
 
-// post /delete
-router.post("/delete/:id", isAuthenticated, isAdmin("Admin"), deleteEmployees)
 
 export default router;

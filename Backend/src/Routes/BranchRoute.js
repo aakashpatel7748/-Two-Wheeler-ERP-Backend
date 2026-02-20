@@ -1,30 +1,17 @@
 import { Router } from "express";
 const router = Router();
-import { isAuthenticated } from "../Middleware/adminAuth.js";
+import { isAuthenticated } from "../Middleware/companyAuth.js";
 import {
-    createBranch,
-    getAllBranches,
-    updateBranch,
-    deleteBranch,
-    getBranche
+    Branchs,
+    getBranch,
 } from "../Controller/BranchController.js";
-
-import { isAdmin } from "../Middleware/isAdmin.js"
 
 
 // get /branch
-router.get("/all-branchs", isAuthenticated, isAdmin("Admin"), getAllBranches)
-
-// get /branch/:id
-router.get("/branch/:id", isAuthenticated, isAdmin("Admin"), getBranche)
+router.get("/get-branchs", isAuthenticated, getBranch)
 
 // post /create
-router.post("/create", isAuthenticated, isAdmin("Admin"), createBranch)
+router.post("/branch", isAuthenticated, Branchs)
 
-// put /update
-router.post("/update/:id", isAuthenticated, isAdmin("Admin"), updateBranch)
-
-// delete /delete
-router.post("/delete/:id", isAuthenticated, isAdmin("Admin"), deleteBranch)
 
 export default router;
